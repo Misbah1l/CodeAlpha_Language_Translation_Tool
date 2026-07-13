@@ -24,7 +24,7 @@ This web application allows users to translate text between multiple languages t
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python 3
 - Flask
@@ -57,7 +57,7 @@ CodeAlpha_Language_Translation_Tool/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the repository
 
@@ -105,7 +105,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🌎 Supported Languages
+##  Supported Languages
 
 - Auto Detect
 - English
@@ -129,7 +129,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 Source: English
 
@@ -153,7 +153,7 @@ This project was developed as **Task 1 – Language Translation Tool** for the *
 
 ---
 
-## 👩‍💻 Developer
+##  Developer
 
 **Misbah Saeed**
 
@@ -163,7 +163,7 @@ Institute of Space Technology (IST)
 
 ---
 
-## ⭐ Acknowledgements
+##  Acknowledgements
 
 - CodeAlpha
 - Flask
