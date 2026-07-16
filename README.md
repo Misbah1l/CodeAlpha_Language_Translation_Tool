@@ -1,4 +1,4 @@
-#  AI Language Translation Tool
+#  🤖 AI Language Translation Tool
 
 An AI-powered Language Translation Tool developed using **Python**, **Flask**, and **Google Translator API** as part of the **CodeAlpha Artificial Intelligence Internship**.
 
