@@ -2,20 +2,38 @@
    AI LANGUAGE TRANSLATOR
    CodeAlpha Internship Project
    Developed by: Misbah Saeed
+   Premium Aesthetic Theme
 ===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
 
---primary:#6366F1;
---secondary:#06B6D4;
---accent:#22C55E;
+/* Main Palette */
+
+--bg1:#243B55;
+--bg2:#4C3F72;
+--bg3:#8F4C6B;
+--bg4:#B85C73;
+--bg5:#D48A73;
+
+/* Accent Colors */
+
+--primary:#D16A86;
+--secondary:#A65F8B;
+--accent:#243B55;
+
+--success:#4ADE80;
 --danger:#EF4444;
---glass:rgba(255,255,255,.12);
---glassBorder:rgba(255,255,255,.18);
+
+--glass:rgba(20,20,35,.22);
+--glassBorder:rgba(255,255,255,.15);
+
 --text:#ffffff;
---shadow:0 20px 45px rgba(0,0,0,.35);
+--dark:#1E293B;
+
+--shadow:
+0 25px 60px rgba(0,0,0,.35);
 
 }
 
@@ -34,24 +52,36 @@ body{
 
 min-height:100vh;
 
-background:
-linear-gradient(135deg,#0F172A,#312E81,#0891B2);
-
-background-size:300% 300%;
-
-animation:bgAnimation 15s ease infinite;
-
 display:flex;
 
 justify-content:center;
 
 align-items:center;
 
-padding:40px;
+padding:45px;
 
-color:white;
+color:var(--text);
+
+background:
+linear-gradient(
+135deg,
+#243B55 0%,
+#4C3F72 28%,
+#8F4C6B 58%,
+#B85C73 82%,
+#D48A73 100%
+);
+
+background-size:300% 300%;
+
+animation:bgAnimation 16s ease infinite;
+
+overflow-x:hidden;
 
 }
+
+
+/* Animated Background */
 
 @keyframes bgAnimation{
 
@@ -69,41 +99,44 @@ background-position:0% 50%;
 
 }
 
+
+/* =====================================================
+   Glass Container
+===================================================== */
+
 .container{
 
-width:100%;
+background:rgba(18,18,35,.25);
 
-max-width:960px;
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
 
-background:var(--glass);
+border:1px solid rgba(255,255,255,.14);
 
-backdrop-filter:blur(20px);
-
--webkit-backdrop-filter:blur(20px);
-
-border:1px solid var(--glassBorder);
-
-border-radius:24px;
-
-padding:35px;
-
-box-shadow:var(--shadow);
-
-transition:.4s;
+box-shadow:
+0 30px 70px rgba(0,0,0,.40);
 
 }
 
 .container:hover{
 
-transform:translateY(-4px);
+transform:translateY(-5px);
+
+box-shadow:
+0 30px 70px rgba(0,0,0,.30);
 
 }
 
+
+/* =====================================================
+   Heading
+===================================================== */
+
 h1{
 
-font-size:38px;
+font-size:40px;
 
-font-weight:700;
+font-weight:800;
 
 text-align:center;
 
@@ -111,37 +144,80 @@ margin-bottom:10px;
 
 letter-spacing:1px;
 
+background:linear-gradient(
+90deg,
+#ffffff,
+#FFE4D6,
+#FFD0D0
+);
+
+background-clip: text;
+-webkit-background-clip: text;
+
+color: transparent;
+-webkit-text-fill-color: transparent;
+
 }
 
 .subtitle{
 
 text-align:center;
 
-opacity:.8;
+font-size:15px;
+
+font-weight:400;
+
+line-height:1.7;
+
+opacity:.92;
+
+max-width:700px;
+
+margin:auto;
 
 margin-bottom:35px;
 
-font-size:15px;
-
 }
+
+
+/* =====================================================
+   Labels
+===================================================== */
 
 label{
 
 display:block;
 
-font-weight:600;
+font-size:15px;
 
-margin-bottom:8px;
+font-weight:600;
 
 margin-top:18px;
 
+margin-bottom:8px;
+
+color:#FFF7F5;
+
+letter-spacing:.3px;
+
 }
+
+label i{
+
+margin-right:8px;
+
+color:#FFE4D6;
+
+}
+/* =====================================================
+   Textarea
+===================================================== */
 
 textarea{
 
 width:100%;
 
-padding:18px;
+padding:18px 20px;
 
 border:none;
 
@@ -153,19 +229,39 @@ font-size:16px;
 
 resize:none;
 
-background:white;
+background:rgba(255,255,255,.92);
 
-color:#111827;
+color:#243B53;
 
-transition:.3s;
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+textarea::placeholder{
+
+color:#7B8794;
 
 }
 
 textarea:focus{
 
-box-shadow:0 0 0 4px rgba(99,102,241,.3);
+background:white;
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 0 4px rgba(248,177,149,.35),
+0 15px 35px rgba(0,0,0,.12);
 
 }
+
+
+/* =====================================================
+   Counter
+===================================================== */
 
 .counter{
 
@@ -173,21 +269,48 @@ display:flex;
 
 justify-content:space-between;
 
-margin-top:8px;
+margin-top:12px;
+
+padding:0 4px;
 
 font-size:14px;
 
-opacity:.85;
+font-weight:500;
+
+color:#FFF6F2;
+
+opacity:.95;
 
 }
+
+.counter span{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+}
+
+.counter i{
+
+color:#FFE3D3;
+
+}
+
+
+/* =====================================================
+   Language Row
+===================================================== */
 
 .row{
 
 display:flex;
 
-gap:20px;
+gap:22px;
 
-margin-top:25px;
+margin-top:28px;
 
 }
 
@@ -197,216 +320,590 @@ flex:1;
 
 }
 
+
+/* =====================================================
+   Select Box
+===================================================== */
+
 select{
 
 width:100%;
 
-padding:14px;
+padding:15px 18px;
 
 border:none;
 
-border-radius:14px;
+outline:none;
+
+border-radius:16px;
 
 font-size:15px;
 
-outline:none;
+font-weight:500;
+
+background:rgba(255,255,255,.92);
+
+color:#243B53;
 
 cursor:pointer;
 
+transition:.35s;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
 }
-/* ===============================
-   Buttons
-================================ */
+
+select:hover{
+
+transform:translateY(-2px);
+
+}
+
+select:focus{
+
+background:white;
+
+box-shadow:
+0 0 0 4px rgba(248,177,149,.35),
+0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+/* =====================================================
+   Buttons Layout
+===================================================== */
 
 .buttons{
-    display:flex;
-    gap:15px;
-    margin-top:30px;
-    flex-wrap:wrap;
+
+display:flex;
+
+gap:16px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
 }
 
+
+/* =====================================================
+   Common Button
+===================================================== */
+
 button{
-    flex:1;
-    min-width:160px;
-    border:none;
-    outline:none;
-    padding:15px 22px;
-    border-radius:14px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:all .3s ease;
+
+flex:1;
+
+min-width:170px;
+
+padding:16px 22px;
+
+border:none;
+
+outline:none;
+
+border-radius:16px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:all .35s ease;
+
+color:white;
+
+box-shadow:
+0 12px 28px rgba(0,0,0,.18);
+
 }
 
 button i{
-    margin-right:8px;
+
+margin-right:8px;
+
 }
 
 button:hover{
-    transform:translateY(-3px);
+
+transform:translateY(-4px) scale(1.02);
+
+box-shadow:
+0 20px 35px rgba(0,0,0,.22);
+
 }
 
+
+/* =====================================================
+   Translate Button
+===================================================== */
+
 .btn-translate{
-    background:#22C55E;
-    color:white;
+
+background:
+linear-gradient(
+135deg,
+#F67280,
+#F8B195
+);
+
 }
 
 .btn-translate:hover{
-    background:#16A34A;
+
+filter:brightness(1.05);
+
 }
 
+
+/* =====================================================
+   Clear Button
+===================================================== */
+
 .btn-clear{
-    background:#EF4444;
-    color:white;
+
+background:
+linear-gradient(
+135deg,
+#C06C84,
+#6C5B7B
+);
+
 }
 
 .btn-clear:hover{
-    background:#DC2626;
+
+filter:brightness(1.05);
+
 }
+
+
+/* =====================================================
+   Swap Button
+===================================================== */
+
+#swapBtn{
+
+background:
+linear-gradient(
+135deg,
+#F8B195,
+#F67280
+);
+
+color:white;
+
+width:65px;
+
+height:58px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:16px;
+
+}
+
+#swapBtn i{
+
+margin:0;
+
+font-size:18px;
+
+}
+
+#swapBtn:hover{
+
+transform:rotate(180deg) scale(1.05);
+
+}
+
+
+/* =====================================================
+   Action Buttons
+===================================================== */
 
 #copyBtn{
-    width:100%;
-    margin-top:20px;
-    background:#2563EB;
-    color:white;
+
+background:
+linear-gradient(
+135deg,
+#355C7D,
+#6C5B7B
+);
+
 }
 
-#copyBtn:hover{
-    background:#1D4ED8;
+#speakBtn{
+
+background:
+linear-gradient(
+135deg,
+#F8B195,
+#F67280
+);
+
 }
 
-/* ===============================
-   Output Area
-================================ */
+#downloadBtn{
+
+background:
+linear-gradient(
+135deg,
+#355C7D,
+#C06C84
+);
+
+}
+/* =====================================================
+   Output Section
+===================================================== */
 
 h2{
-    margin-top:35px;
-    margin-bottom:15px;
-    font-size:24px;
+
+margin-top:40px;
+
+margin-bottom:18px;
+
+font-size:28px;
+
+font-weight:700;
+
+color:#FFF8F6;
+
+letter-spacing:.4px;
+
+}
+
+h2 i{
+
+margin-right:10px;
+
+color:#FFE0D2;
+
 }
 
 #outputText{
-    background:#F8FAFC;
-    color:#111827;
+
+background:rgba(255,255,255,.94);
+
+color:#243B53;
+
+font-weight:500;
+
 }
 
-/* ===============================
-   Footer
-================================ */
 
-.footer{
-    margin-top:30px;
-    text-align:center;
-    font-size:14px;
-    opacity:.8;
-}
-
-.footer span{
-    color:#38BDF8;
-    font-weight:600;
-}
-
-/* ===============================
-   Loading Spinner
-================================ */
+/* =====================================================
+   Loader
+===================================================== */
 
 .loader{
-    display:none;
-    width:45px;
-    height:45px;
-    margin:20px auto;
-    border:5px solid rgba(255,255,255,.3);
-    border-top:5px solid white;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
+
+display:none;
+
+width:52px;
+
+height:52px;
+
+margin:30px auto;
+
+border-radius:50%;
+
+border:5px solid rgba(255,255,255,.25);
+
+border-top:5px solid #F8B195;
+
+animation:spin .9s linear infinite;
+
 }
 
 @keyframes spin{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
+
+from{
+transform:rotate(0deg);
 }
 
-/* ===============================
+to{
+transform:rotate(360deg);
+}
+
+}
+
+
+/* =====================================================
    Toast Message
-================================ */
+===================================================== */
 
 .toast-message{
-    position:fixed;
-    top:25px;
-    right:25px;
-    background:#22C55E;
-    color:white;
-    padding:14px 22px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    opacity:0;
-    pointer-events:none;
-    transition:.4s;
-    z-index:9999;
+
+position:fixed;
+
+top:25px;
+
+right:25px;
+
+padding:15px 24px;
+
+background:linear-gradient(
+135deg,
+#355C7D,
+#6C5B7B
+);
+
+color:white;
+
+border-radius:14px;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.25);
+
+opacity:0;
+
+pointer-events:none;
+
+transform:translateY(-20px);
+
+transition:.4s;
+
+z-index:9999;
+
+font-weight:600;
+
 }
 
 .toast-message.show{
-    opacity:1;
+
+opacity:1;
+
+transform:translateY(0);
+
 }
 
-/* ===============================
-   Card Animation
-================================ */
 
-.container{
-    animation:fadeUp .8s ease;
+/* =====================================================
+   Footer
+===================================================== */
+
+.footer{
+
+margin-top:40px;
+
+text-align:center;
+
+font-size:14px;
+
+line-height:1.9;
+
+color:rgba(255,255,255,.85);
+
 }
+
+.footer span{
+
+font-weight:700;
+
+background:linear-gradient(
+90deg,
+#FFE3D3,
+#F8B195
+);
+
+background-clip: text;
+-webkit-background-clip: text;
+
+color: transparent;
+-webkit-text-fill-color: transparent;
+
+}
+
+
+/* =====================================================
+   Fade Animation
+===================================================== */
 
 @keyframes fadeUp{
 
-    from{
-        opacity:0;
-        transform:translateY(35px);
-    }
+from{
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+opacity:0;
+
+transform:translateY(40px);
 
 }
 
-/* ===============================
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* =====================================================
+   Scrollbar
+===================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#355C7D;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+180deg,
+#F8B195,
+#F67280
+);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#C06C84;
+
+}
+
+
+/* =====================================================
    Responsive
-================================ */
+===================================================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-    body{
-        padding:20px;
-    }
+.container{
 
-    .container{
-        padding:25px;
-    }
-
-    h1{
-        font-size:28px;
-    }
-
-    .row{
-        flex-direction:column;
-    }
-
-    .buttons{
-        flex-direction:column;
-    }
-
-    button{
-        width:100%;
-    }
-
-    textarea{
-        font-size:15px;
-    }
+padding:28px;
 
 }
+
+h1{
+
+font-size:32px;
+
+}
+
+h2{
+
+font-size:24px;
+
+}
+
+.row{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+#swapBtn{
+
+width:100%;
+
+height:58px;
+
+}
+
+}
+
+
+@media(max-width:600px){
+
+body{
+
+padding:18px;
+
+}
+
+.container{
+
+padding:22px;
+
+border-radius:22px;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+}
+
+textarea{
+
+font-size:15px;
+
+padding:16px;
+
+}
+
+select{
+
+font-size:14px;
+
+padding:14px;
+
+}
+
+button{
+
+font-size:15px;
+
+padding:15px;
+
+}
+
+.counter{
+
+font-size:13px;
+
+flex-direction:column;
+
+gap:8px;
+
+}
+
+}
+
+
+/* =====================================================
+   End of File
+===================================================== */

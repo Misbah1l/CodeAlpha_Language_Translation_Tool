@@ -49,20 +49,40 @@ updateCounter();
 // Copy Translation
 // =======================================
 
-copyBtn.addEventListener("click", () => {
+copyBtn.addEventListener("click", async () => {
 
     if (outputText.value.trim() === "") {
         alert("Nothing to copy!");
         return;
     }
 
-    navigator.clipboard.writeText(outputText.value);
+    try {
 
-    toast.classList.add("show");
+        await navigator.clipboard.writeText(outputText.value);
 
-    setTimeout(() => {
-        toast.classList.remove("show");
-    }, 2000);
+        toast.classList.add("show");
+
+        copyBtn.innerHTML =
+            '<i class="fa-solid fa-check"></i> Copied!';
+
+        copyBtn.disabled = true;
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+            copyBtn.innerHTML =
+                '<i class="fa-solid fa-copy"></i> Copy';
+
+            copyBtn.disabled = false;
+
+        }, 2000);
+
+    } catch (err) {
+
+        alert("Failed to copy text.");
+
+    }
 
 });
 
@@ -116,11 +136,10 @@ speakBtn.addEventListener("click", () => {
     speech.pitch = 1;
     speech.volume = 1;
 
-    // Browser default voice use karo
+    // Browser default voice
     window.speechSynthesis.speak(speech);
 
 });
-    
 
 
 // =======================================
@@ -178,6 +197,12 @@ clearBtn.addEventListener("click", () => {
 
         updateCounter();
         outputText.value = "";
+
+        // Restore Copy button if needed
+        copyBtn.innerHTML =
+            '<i class="fa-solid fa-copy"></i> Copy';
+
+        copyBtn.disabled = false;
 
     }, 100);
 
