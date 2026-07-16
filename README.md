@@ -134,15 +134,23 @@ http://127.0.0.1:5000
 Source: English
 
 Target: Urdu
-<img width="1671" height="942" alt="image" src="https://github.com/user-attachments/assets/febc046b-253d-4fe2-8ab6-284fce46d4f3" />
-<img width="1601" height="868" alt="image" src="https://github.com/user-attachments/assets/90a6d5f4-036d-4072-b962-42b56a1801c0" />
+<img width="1915" height="874" alt="image" src="https://github.com/user-attachments/assets/87e555d3-3080-4140-8b0f-548e462f1cf9" />
+
+<img width="1919" height="872" alt="image" src="https://github.com/user-attachments/assets/acb89725-b5f2-4da0-9c1c-01e0686d2ff7" />
+
+<img width="1919" height="808" alt="image" src="https://github.com/user-attachments/assets/153ba0f0-ae54-406d-814e-3760920539d1" />
+
 
 Source: English
 
 Target: French
-<img width="1712" height="899" alt="image" src="https://github.com/user-attachments/assets/dec91bf4-17cd-425f-834a-d0e532f5822b" />
-<img width="1711" height="373" alt="image" src="https://github.com/user-attachments/assets/b947d724-d0bc-4fbf-8d3d-40a1812d0554" />
-<img width="1856" height="847" alt="image" src="https://github.com/user-attachments/assets/ab274e9e-dfb4-47f9-83ed-ecb1250ffd79" />
+
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/2dfa180a-1ba0-498e-ad95-59823bf82a97" />
+
+<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/70cf98ce-c800-46fd-b487-f39960181767" />
+
+<img width="1919" height="812" alt="image" src="https://github.com/user-attachments/assets/254469a6-63d3-411b-8dff-ac3491ca5154" />
+
 
 
 ---
